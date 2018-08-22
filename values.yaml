@@ -1,0 +1,15 @@
+
+namespace: envoy-pilot
+
+name: envoy-pilot
+image:
+  repository: "tak2siva/envoy-pilot"
+  tag: "latest"
+  pullPolicy: Always
+
+service:
+  grpc_port: 7777
+  http_port: 9090
+
+config:
+  CONSUL_PATH: "http://consul-consul.default:8500"

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: envoy-pilot-server
+spec:
+  ports:
+    - port: {{ .Values.service.grpc_port }}
+      targetPort: grpc
+      protocol: TCP
+      name: grpc
+    - port: {{ .Values.service.http_port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: envoy-pilot-server
