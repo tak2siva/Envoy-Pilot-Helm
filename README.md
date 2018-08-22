@@ -5,5 +5,5 @@
 Usage:
 
 ```
-helm install ../envoy-pilot-helm-chart --namespace envoy-pilot --name envoy-pilot --set namespace=envoy-pilot-test,config.CONSUL_PATH="http://consul-consul.default:8500"
+helm install ../Envoy-Pilot-Helm --namespace envoy-pilot --name envoy-pilot --set namespace=envoy-pilot-test,config.CONSUL_PATH="http://consul-consul.default:8500"
 ```
